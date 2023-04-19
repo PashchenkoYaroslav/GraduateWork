@@ -1,0 +1,58 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
+
+import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+
+interface ITokenA is IERC20 {
+    function setPool (uint256 amount, bool isExpandPool) external returns (uint256);
+    function getPool () external view returns (uint256);
+}
+
+interface ITokenB is IERC721 {
+    function setPool (uint256 amount, bool isExpandPool) external returns (uint256);
+    function getPool () external view returns (uint256);
+    function price(uint256 tokenId) external view returns (uint256);
+    function isBurnable (uint256 tokenId)  external view returns (bool);
+    function burn(uint256 tokenId) external;
+}
+
+contract QuickTokenDEX is ERC1155, IERC721Receiver {
+
+    ITokenA private _AddressTokenA;
+    ITokenB private _AddressTokenB;
+
+    uint256 feeValue = 3;
+    uint256 feeMultiplier = 1000;
+
+    constructor(address _currencyContractAddress, address _assetContractAddress) ERC1155 ("https://ipfs.io/ipfs/QmayMxCKcReM3q3NBfT2e4HypCGBPeN9LQifrWMxxik5vi/{id}.json"){
+        _AddressTokenA = ITokenA(_currencyContractAddress);
+        _AddressTokenB = ITokenB(_assetContractAddress);
+    }
+
+    function swapToTokenB(uint256 amount) external {
+       uint256 tokenALiquidity = _AddressTokenA.getPool();
+       uint256 tokenBLiquidity = _AddressTokenB.getPool();
+       //add require that user must have an amount
+       require(_AddressTokenA.balanceOf(msg.sender) >= amount, "Not enough tokens to provide!");
+       payable(address(this)).transfer(amount / feeMultiplier * feeValue);
+
+       uint256 amountTokenAAfterFee = amount * (1 - feeValue * feeMultiplier);
+       uint256 tokenBReceived = tokenBLiquidity - tokenALiquidity*tokenBLiquidity/amountTokenAAfterFee;
+       
+        //transfer tokenA from user to pool
+       _AddressTokenA.transfer(payable(address(this)), amountTokenAAfterFee);
+       _AddressTokenA.setPool(amountTokenAAfterFee, true);
+
+        //transfer tokenB from pool to user
+        _AddressTokenB.transfer(msg.sender, tokenBReceived);
+       _AddressTokenB.setPool(tokenBReceived, false);
+    }
+
+
+    function onERC721Received(address, address, uint256, bytes calldata) external override pure returns (bytes4) {
+        return IERC721Receiver.onERC721Received.selector;
+    }
+}
