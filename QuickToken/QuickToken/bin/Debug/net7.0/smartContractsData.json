@@ -1,7 +1,0 @@
-{
-  "AddressTokenA": "0xf0c2ff0fbf81f3d4b88290597fb7ab35dff0990c",
-  "AddressTokenB": "0xdd3526a12532c8baa56c9f7d820515213e85f971",
-  "AddressDEX": "0x2c37777e2967571991d29087071d007c7d4ef357",
-  "API-URL": "https://sepolia.infura.io/v3/48c635e543cd4c508730feb3105d5150",
-  "PrivateKey": "8edf79016d92d7e7c47603aa8ec4d3f2deb76af1be89712d2be292f023c7df5a"
-}
