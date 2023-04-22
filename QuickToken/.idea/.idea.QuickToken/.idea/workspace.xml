@@ -6,47 +6,39 @@
     <projectFile profileName="https">QuickToken/QuickToken.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88b9a86b-8817-407a-ad9f-8f6375a8064c" name="Changes" comment="" />
+    <list default="true" id="b75ed422-f4f6-4645-bcb5-0dcac87d996b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/16a4bd0b42d34d0193ea1510f5b5a45a188a8/8d/f9209278/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30a09fec6d614a72a21b9dbc5ff2d9f03e00/98/4093dd6a/Web3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35821a780c184139931f843ca64490f47200/84/263ae1ba/Account.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d1716ccc8b0f45079c25d1472364f97e2000/0f/58c54860/Web3.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4c6a2732e1b4f23890b41f6a7834da75a000/20/aa286342/ContractHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/387cbd5c29c7c075dc8bcb3467266a2f31ed7e7a8b93e888692257a15430414e/IContractTransactionHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6aeff2a1ba1135865c36bd3eb7bc274b61c2d5750c43b205866fba653677ca3/ERC721ContractService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/81a3bcf4bb6aa5e62a9839f9cfeeba6126496f4fa07d1e57b27a5176e42525/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f31b4d89603cb36acc6bf7ca287ccf8cd7d263cdb6b90c749314b2aa96f2475/RpcClient.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="ProjectId" id="2OnnnhbL2hb3NyUme6vF6k3eiRy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2Ojm7wrhQOFtYByxBhiUlVFHRza" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\zod75\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\zod75\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\zod75\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\zod75\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\zod75\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\zod75\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.QuickToken: IIS Express">
     <configuration name="QuickToken: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/QuickToken/QuickToken.csproj" />
@@ -97,18 +89,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88b9a86b-8817-407a-ad9f-8f6375a8064c" name="Changes" comment="" />
-      <created>1682082204148</created>
+      <changelist id="b75ed422-f4f6-4645-bcb5-0dcac87d996b" name="Changes" comment="" />
+      <created>1682205383750</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682082204148</updated>
-      <workItem from="1682082204841" duration="330000" />
-      <workItem from="1682176002392" duration="1669000" />
-      <workItem from="1682177798769" duration="334000" />
-      <workItem from="1682178441594" duration="7987000" />
-      <workItem from="1682190264019" duration="11232000" />
-      <workItem from="1682202570952" duration="906000" />
-      <workItem from="1682203534871" duration="567000" />
+      <updated>1682205383750</updated>
+      <workItem from="1682205385742" duration="61000" />
     </task>
     <servers />
   </component>
@@ -117,10 +103,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
