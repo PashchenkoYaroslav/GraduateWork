@@ -17,7 +17,7 @@ public class DataController : QuickTokenBaseController
     }
 
     /// <summary>
-    /// Mint a batch of type A token to the user.
+    /// Get user balances.
     /// </summary>
     [HttpGet("GetBalances")]
     public async Task<IActionResult> GetBalanceAsync([FromQuery] GetBalanceRequest request)
