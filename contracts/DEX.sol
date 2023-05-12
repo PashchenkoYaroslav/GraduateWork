@@ -16,7 +16,7 @@ interface ITokenA is IERC721  {
     function mintBatchToDex (address to, uint256 amount) external;
     function isPoolEnough(uint256 amount) external view returns (bool);
     function getPoolTokens (uint256 amount) external returns (uint256[] memory);
-    function buyToken (address from, address to, uint256 amount) external;
+    function buyToken (address to, uint256 amount) external;
     function sellToken (address from, uint256 amount) external;
     function setPool (uint256 amount, bool isExpandPool) external returns (uint256);
     function getPool () external view returns (uint256); 
@@ -43,9 +43,9 @@ contract QuickTokenDEX is IERC721Receiver {
     uint8 constant mathDecimals = 18;
     uint256 constant mathMultiplier = 10 ** mathDecimals;
 
-    constructor(address _tokenAAddress, address _tokenBAddress) {
+    constructor(address _tokenAAddress, address _tokenCAddress) {
         _TokenA = ITokenA(_tokenAAddress);
-        _TokenC = ITokenC(_tokenBAddress);
+        _TokenC = ITokenC(_tokenCAddress);
     }
 
     function swapToTokenA(uint256 YdProvided) public {
@@ -70,15 +70,15 @@ contract QuickTokenDEX is IERC721Receiver {
        uint256 Yfee = (Y1_actual - tokenCLiquidity) * feeValue /feeMultiplier;
      
        
-       _TokenC.transfer(payable(address(this)), Yfee);
-       _TokenC.transfer(payable(address(this)), Yd);
+       _TokenC.transferFrom(msg.sender, payable(address(this)), Yfee);
+       _TokenC.transferFrom(msg.sender, payable(address(this)), Yd);
        _TokenC.setPool(Yd, true);
 
-       _TokenA.buyToken(payable(address(this)), msg.sender, Xd);
+       _TokenA.buyToken(msg.sender, Xd);
         
     }
 
-    function swapToTokenB(uint256 Xd) public {
+    function swapToTokenC(uint256 Xd) public {
        uint256 tokenALiquidity = _TokenA.getPool();
        uint256 tokenCLiquidity = _TokenC.getPool();
 
@@ -91,6 +91,7 @@ contract QuickTokenDEX is IERC721Receiver {
 
        
        _TokenC.transfer(payable(address(this)), Yfee);
+       //сверху ошибка, sender в трансфере - всегда контракт!
        _TokenC.transfer(msg.sender, Yd);
        _TokenC.setPool(Yd + Yfee, false);
 

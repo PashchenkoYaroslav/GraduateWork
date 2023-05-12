@@ -51,18 +51,17 @@ contract TokenA is ERC721, Ownable, ERC721Burnable, ERC721Enumerable {
     function getPoolTokens (uint256 amount) internal returns (uint256[] memory) {
         uint256[] memory idArr = new uint256[] (amount);
         for (uint256 i=0; i < amount; i++) {
-            uint256 dd = pool - 1;
-            idArr[i] = poolIds[dd];
+            idArr[i] = poolIds[pool - 1];
             poolIds.pop();
             pool--;
         }
         return idArr;
     }
 
-    function buyToken (address from, address to, uint256 amount) public  {
+    function buyToken (address to, uint256 amount) public  {
         uint256[] memory idArr = getPoolTokens(amount);
         for (uint256 i=0; i < amount; i++) {
-           safeTransferFrom(from, to, idArr[i]);
+           safeTransferFrom(msg.sender, to, idArr[i]);
         }
     }
 
