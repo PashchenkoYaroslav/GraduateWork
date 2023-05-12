@@ -17,7 +17,7 @@ contract TokenA is ERC721, Ownable, ERC721Burnable, ERC721Enumerable {
     constructor() ERC721("QuickTokenAsset", "QTKA") {
     }
 
-    function mintBatch (uint256 amount, address to) public onlyOwner {
+    function mintBatch (address to, uint256 amount) public onlyOwner {
         for (uint256 i=0; i < amount; i++) {
             uint256 newTokenId = _tokenIds.current();
             _mint(to, newTokenId);
@@ -25,7 +25,7 @@ contract TokenA is ERC721, Ownable, ERC721Burnable, ERC721Enumerable {
         }
     }
 
-    function mintBatchToDex (uint256 amount, address to) public onlyOwner {
+    function mintBatchToDex (address to, uint256 amount) public onlyOwner {
         for (uint256 i=0; i < amount; i++) {
             uint256 newTokenId = _tokenIds.current();
             _mint(to, newTokenId);
@@ -66,15 +66,15 @@ contract TokenA is ERC721, Ownable, ERC721Burnable, ERC721Enumerable {
         }
     }
 
-    function sellToken (address to, uint256 amount) public {
+    function sellToken (address from, uint256 amount) public {
         // to pool
         uint256[] memory idArr = new uint256[] (amount);
         for (uint256 i=0; i < amount; i++) {
-            idArr[i] = tokenOfOwnerByIndex(msg.sender, i);
+            idArr[i] = tokenOfOwnerByIndex(from, i);
         }
         
         for (uint256 i=0; i < amount; i++) {
-            safeTransferFrom(msg.sender, to, idArr[i]);
+            safeTransferFrom(from, msg.sender, idArr[i]);
             poolIds.push(idArr[i]);
             pool++;
         }
