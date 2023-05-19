@@ -18,50 +18,53 @@ public class DexController: QuickTokenBaseController
     }
     
     /// <summary>
-    /// Swap token A for a token B.
+    /// Sell user asset for currency.
     /// </summary>
-    [HttpPost("swapToTokenA")]
-    public async Task<IActionResult> SwapToTokenAAsync(SwapToTokenARequest request)
+    [HttpPost("sellAsset")]
+    public async Task<IActionResult> SellAssetAsync(SellAssetRequest request)
     {
-        var account = new Account(data["PrivateKey"]);
+        var account = new Account(request.SecretKey);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
             jsonSerializerSettings: null,
             httpClientHandler: null, log: _logger);
         
         var web3 = new Web3(account,web3Client);
-        var contractHandler = web3.Eth.GetContractTransactionHandler<SwapToTokenAFunction>();
-        var contractMessage = new SwapToTokenAFunction
+        var contractHandler = web3.Eth.GetContractTransactionHandler<SellAssetFunction>();
+        var contractMessage = new SellAssetFunction
         {
-            YdProvided = request.YdProvided
+            Xd = request.Xd
         };
-        contractMessage.Gas = 10000000;
-        var transaction = await contractHandler.SendRequestAsync(data["AddressTokenB"],contractMessage);
-        return Ok(transaction);
+
+        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressDEX"],contractMessage);
+        if (transaction.Status.Value != 1)
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        return Ok();
     }
     
     
     /// <summary>
-    /// Swap token B for a token A.
+    /// Sell user currency for asset.
     /// </summary>
-    [HttpPost("swapToTokenB")]
-    public async Task<IActionResult> SwapToTokenBAsync(SwapToTokenBRequest request)
+    [HttpPost("sellCurrency")]
+    public async Task<IActionResult> SellCurrencyAsync(SellCurrencyRequest request)
     {
-        var account = new Account(data["PrivateKey"]);
+        var account = new Account(request.SecretKey);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
             jsonSerializerSettings: null,
             httpClientHandler: null, log: _logger);
         
         var web3 = new Web3(account,web3Client);
-        var contractHandler = web3.Eth.GetContractTransactionHandler<SwapToTokenBFunction>();
-        var contractMessage = new SwapToTokenBFunction
+        var contractHandler = web3.Eth.GetContractTransactionHandler<SellCurrencyFunction>();
+        var contractMessage = new SellCurrencyFunction
         {
-            Xd = request.Xd
+            YdProvided = request.YdProvided
         };
-        contractMessage.Gas = 10000000;
-        
-        var transaction = await contractHandler.SendRequestAsync(data["AddressTokenB"],contractMessage);
-        return Ok(transaction);
+
+        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressDEX"],contractMessage);
+        if (transaction.Status.Value != 1)
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        return Ok();
     }
 }

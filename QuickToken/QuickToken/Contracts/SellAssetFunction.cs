@@ -4,8 +4,8 @@ using Nethereum.Contracts;
 
 namespace QuickToken.Contracts;
 
-[Function("swapToTokenB")]
-public class SwapToTokenBFunction : FunctionMessage
+[Function("sellAsset")]
+public class SellAssetFunction : FunctionMessage
 {
     [Parameter("uint256", "Xd", 1)]
     public BigInteger Xd { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj": {}
+    "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj": {}
   },
   "projects": {
-    "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj": {
+    "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
+        "projectUniqueName": "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
         "projectName": "QuickToken",
-        "projectPath": "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
+        "projectPath": "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
         "packagesPath": "C:\\Users\\zod75\\.nuget\\packages\\",
-        "outputPath": "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\obj\\",
+        "outputPath": "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zod75\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

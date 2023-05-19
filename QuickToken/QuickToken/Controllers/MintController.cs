@@ -17,11 +17,16 @@ public class MintController: QuickTokenBaseController
     }
 
     /// <summary>
-    /// Mint a batch of type A token to the user.
+    /// Mint a batch of Asset to the user.
     /// </summary>
-    [HttpPost("MintTokenABatch")]
-    public async Task<IActionResult> MintTokenABatchAsync(MintBatchRequest request)
+    [HttpPost("MintAssetToUser")]
+    public async Task<IActionResult> MintAssetAsync(MintBatchRequest request)
     {
+        if (request.AdminSecretKey != data["PrivateKey"])
+        {
+            return new ObjectResult("Данный метод доступен только для администрации!"){StatusCode = 403};
+        }
+        
         var account = new Account(data["PrivateKey"]);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
@@ -43,11 +48,16 @@ public class MintController: QuickTokenBaseController
     }
     
     /// <summary>
-    /// Mint a batch of type A token to the DEX.
+    /// Mint a batch of Asset to the DEX.
     /// </summary>
-    [HttpPost("MintTokenABatchToDEX")]
-    public async Task<IActionResult> MintTokenABatchToDexAsync(MintBatchToDexRequest request)
+    [HttpPost("MintAssetToDEX")]
+    public async Task<IActionResult> MintAssetToDexAsync(MintBatchToDexRequest request)
     {
+        if (request.AdminSecretKey != data["PrivateKey"])
+        {
+            return new ObjectResult("Данный метод доступен только для администрации!"){StatusCode = 403};
+        }
+        
         var account = new Account(data["PrivateKey"]);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
@@ -58,7 +68,7 @@ public class MintController: QuickTokenBaseController
         var contractHandler = web3.Eth.GetContractTransactionHandler<MintBatchToDexFunction>();
         var contractMessage = new MintBatchToDexFunction
         {
-            To = request.To,
+            To = data["AddressDEX"],
             Amount = request.Amount
         };
 
@@ -70,11 +80,16 @@ public class MintController: QuickTokenBaseController
     
 
     /// <summary>
-    /// Mint token B to address.
+    /// Mint a batch of Currency to the user.
     /// </summary>
-    [HttpPost("MintTokenB")]
-    public async Task<IActionResult> MintTokenBAsync(MintRequest request)
+    [HttpPost("MintCurrencyToUser")]
+    public async Task<IActionResult> MintCurrencyAsync(MintRequest request)
     {
+        if (request.AdminSecretKey != data["PrivateKey"])
+        {
+            return new ObjectResult("Данный метод доступен только для администрации!"){StatusCode = 403};
+        }
+        
         var account = new Account(data["PrivateKey"]);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
@@ -89,18 +104,23 @@ public class MintController: QuickTokenBaseController
             Amount = request.Amount
         };
 
-        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressTokenB"],contractMessage);
+        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressTokenC"],contractMessage);
         if (transaction.Status.Value != 1)
             return StatusCode(StatusCodes.Status500InternalServerError);
         return Ok();
     }
     
     /// <summary>
-    /// Mint token B to DEX.
+    /// Mint a batch of Currency to DEX.
     /// </summary>
-    [HttpPost("MintTokenBToDEX")]
-    public async Task<IActionResult> MintTokenBToDexAsync(MintToDexRequest request)
+    [HttpPost("MintCurrencyToDEX")]
+    public async Task<IActionResult> MintCurrencyToDexAsync(MintToDexRequest request)
     {
+        if (request.AdminSecretKey != data["PrivateKey"])
+        {
+            return new ObjectResult("Данный метод доступен только для администрации!"){StatusCode = 403};
+        }
+        
         var account = new Account(data["PrivateKey"]);
         
         var web3Client = new RpcClient(baseUrl: new Uri(data["API-URL"]), authHeaderValue: null,
@@ -110,11 +130,11 @@ public class MintController: QuickTokenBaseController
         var web3 = new Web3(account,web3Client);
         var contractHandler = web3.Eth.GetContractTransactionHandler<MintToDexFunction>();
         var contractMessage = new MintToDexFunction{
-            To = request.To,
+            To = data["AddressDEX"],
             Amount = request.Amount
         };
 
-        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressTokenB"],contractMessage);
+        var transaction = await contractHandler.SendRequestAndWaitForReceiptAsync(data["AddressTokenC"],contractMessage);
         if (transaction.Status.Value != 1)
             return StatusCode(StatusCodes.Status500InternalServerError);
         return Ok();

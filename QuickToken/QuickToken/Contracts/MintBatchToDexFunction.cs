@@ -7,9 +7,9 @@ namespace QuickToken.Contracts;
 [Function("mintBatchToDex")]
 public class MintBatchToDexFunction: FunctionMessage
 {
-    [Parameter("uint256", "amount", 1)]
-    public BigInteger Amount { get; set; }
-    
-    [Parameter("address", "to", 2)]
+    [Parameter("address", "to", 1)]
     public string To { get; set; }
+    
+    [Parameter("uint256", "amount", 2)]
+    public BigInteger Amount { get; set; }
 }

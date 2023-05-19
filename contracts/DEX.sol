@@ -48,7 +48,7 @@ contract QuickTokenDEX is IERC721Receiver {
         _TokenC = ITokenC(_tokenCAddress);
     }
 
-    function swapToTokenA(uint256 YdProvided) public {
+    function sellCurrency(uint256 YdProvided) public {
        // добавляем множитель для реализации математики вещественных чисел
        YdProvided *= mathMultiplier;
        uint256 tokenALiquidity = _TokenA.getPool();
@@ -62,7 +62,7 @@ contract QuickTokenDEX is IERC721Receiver {
        // Y1/2 section to round up
        
        uint256 X1 = (tokenALiquidity * tokenCLiquidity+Y1/2)/Y1;
-       require(X1 < tokenALiquidity, "Not enough token B to change course.");
+       require(X1 < tokenALiquidity, "Not enough token C to change course.");
        uint256 Xd = tokenALiquidity - X1;
     
        uint256 Y1_actual = tokenALiquidity * tokenCLiquidity/X1;
@@ -78,7 +78,7 @@ contract QuickTokenDEX is IERC721Receiver {
         
     }
 
-    function swapToTokenC(uint256 Xd) public {
+    function sellAsset(uint256 Xd) public {
        uint256 tokenALiquidity = _TokenA.getPool();
        uint256 tokenCLiquidity = _TokenC.getPool();
 
@@ -89,9 +89,9 @@ contract QuickTokenDEX is IERC721Receiver {
        uint256 Yd = (tokenCLiquidity - Y1) * (1 * feeMultiplier - feeValue)/feeMultiplier;
        uint256 Yfee = (tokenCLiquidity - Y1) * feeValue/feeMultiplier;
 
-       
-       _TokenC.transfer(payable(address(this)), Yfee);
-       //сверху ошибка, sender в трансфере - всегда контракт!
+        // Yfee удерживается из суммы TokenC, которую мог бы получить пользователь, так что достаточно
+        // вычесть данную величину из пула, трансфер средств при этом не нужен.
+
        _TokenC.transfer(msg.sender, Yd);
        _TokenC.setPool(Yd + Yfee, false);
 

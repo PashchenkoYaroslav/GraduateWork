@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LSSxCWolJcRgbiK5pzcpMgaKbIZZB+Y99tLZKSIXilWmZG2enKusyv/puzI5Br85rXCzOfpIPz0TFtPD4m6s6A==",
+  "dgSpecHash": "LnEnoyDVFOoZPhBV0uDN4OsyXFSSgUTometHhJXxhKpLggYMsnY+0nm4oNLufZuFq1BjnPqLizyMGAxJP9PLTQ==",
   "success": true,
-  "projectFilePath": "D:\\HSE\\Course_4\\Курсовая\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
+  "projectFilePath": "D:\\HSE\\Курсовые\\Курсовая_4\\GraduateWork\\GraduateWork\\QuickToken\\QuickToken\\QuickToken.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zod75\\.nuget\\packages\\common.logging.core\\3.4.1\\common.logging.core.3.4.1.nupkg.sha512",
     "C:\\Users\\zod75\\.nuget\\packages\\jsonrpcsharp\\0.96.0--date20220416-0429.git-02d4ac7\\jsonrpcsharp.0.96.0--date20220416-0429.git-02d4ac7.nupkg.sha512",
