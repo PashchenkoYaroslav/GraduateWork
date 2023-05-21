@@ -7,55 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b75ed422-f4f6-4645-bcb5-0dcac87d996b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QuickToken/Contracts/GetPoolFunction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuickToken/DTO/GetPoolDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuickToken/Responses/GetPoolsResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickToken/Contracts/IncreaseAllowanceToMaxFunction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickToken/Controllers/AdminController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickToken/Requests/IncreaseAllowanceToMaxRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickToken/Requests/SetApprovalForAll.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contracts/Asset.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contracts/Currency.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/BuyFunction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/IncreaseAllowanceToMaxFunction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/MintBatchFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Contracts/MintBatchFunction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/MintBatchToDexFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Contracts/MintBatchToDexFunction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/SellFunction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/SwapToTokenAFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Contracts/SellAssetFunction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Contracts/SwapToTokenBFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Contracts/SellCurrencyFunction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/AdminController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/DataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Controllers/DataController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/DexController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Controllers/DexController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/MintController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Controllers/MintController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/BuyRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/IncreaseAllowanceToMaxRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/MintBatchRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/MintBatchRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/MintBatchToDexRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/MintBatchToDexRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/MintRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/MintRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/MintToDexRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/MintToDexRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SellRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SetApprovalForAllRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SwapToTokenARequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/SellCurrencyRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SwapToTokenBRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/SellAssetRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SellAssetRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/SellAssetRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.exe" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/smartContractsData.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/smartContractsData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/ref/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/ref/QuickToken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/refint/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/refint/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/QuickToken.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/QuickToken.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/QuickToken.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/QuickToken.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickToken/smartContractsData.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/smartContractsData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contracts/A.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contracts/B.sol" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/DEX.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/DEX.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +122,12 @@
       <workItem from="1684519143229" duration="1097000" />
       <workItem from="1684521610003" duration="1700000" />
       <workItem from="1684525363652" duration="1125000" />
+      <workItem from="1684526555749" duration="67000" />
+      <workItem from="1684590001659" duration="1021000" />
+      <workItem from="1684595242256" duration="62000" />
+      <workItem from="1684606679338" duration="665000" />
+      <workItem from="1684704501257" duration="2520000" />
+      <workItem from="1684707429603" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Change description">
       <created>1682449959756</created>
@@ -158,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682449959756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final view">
+      <created>1684526588717</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684526588717</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +167,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Change description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change description" />
+    <MESSAGE value="Final view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final view" />
   </component>
 </project>

@@ -80,11 +80,12 @@ public class DataController : QuickTokenBaseController
         string currencyBalance;
         try
         {
-            currencyBalance = currencyPool.ToString().Insert(currencyPool.ToString().Length - mathDivider, ".");
+            currencyBalance = currencyPool.Pool.ToString().Insert
+                (currencyPool.Pool.ToString().Length - mathDivider, ".");
         }
         catch
         {
-            currencyBalance = currencyPool.ToString();
+            currencyBalance = currencyPool.Pool.ToString();
         }
         var response = new GetPoolsResponse
         {

@@ -51,12 +51,11 @@ contract QuickTokenDEX is IERC721Receiver {
     function sellCurrency(uint256 YdProvided) public {
        // добавляем множитель для реализации математики вещественных чисел
        YdProvided *= mathMultiplier;
+       require(_TokenC.balanceOf(msg.sender) >= YdProvided, "Not enough token C to provide!");
+
        uint256 tokenALiquidity = _TokenA.getPool();
        uint256 tokenCLiquidity = _TokenC.getPool();
 
-       require(_TokenC.balanceOf(msg.sender) >= YdProvided, "Not enough token C to provide!");
-
-    
        uint256 YafterProvidedFee = YdProvided * (1 * feeMultiplier - feeValue)/feeMultiplier;
        uint256 Y1 = YafterProvidedFee + tokenCLiquidity;
        // Y1/2 section to round up
@@ -79,10 +78,10 @@ contract QuickTokenDEX is IERC721Receiver {
     }
 
     function sellAsset(uint256 Xd) public {
+       require(_TokenA.balanceOf(msg.sender) >= Xd, "Not enough token A to provide!");
+    
        uint256 tokenALiquidity = _TokenA.getPool();
        uint256 tokenCLiquidity = _TokenC.getPool();
-
-       require(_TokenA.balanceOf(msg.sender) >= Xd, "Not enough token A to provide!");
 
        uint256 X1 = Xd + tokenALiquidity;
        uint256 Y1 = tokenALiquidity * tokenCLiquidity/X1;
