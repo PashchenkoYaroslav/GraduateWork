@@ -7,28 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b75ed422-f4f6-4645-bcb5-0dcac87d996b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QuickToken/Contracts/IncreaseAllowanceToMaxFunction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuickToken/Controllers/AdminController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuickToken/Requests/IncreaseAllowanceToMaxRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuickToken/Requests/SetApprovalForAll.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Asset.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Currency.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuickToken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/DataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Controllers/DataController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Controllers/DexController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Controllers/DexController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/Requests/SellAssetRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/Requests/SellAssetRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/QuickToken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/smartContractsData.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/bin/Debug/net7.0/smartContractsData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/QuickToken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/ref/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/ref/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/refint/QuickToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/obj/Debug/net7.0/refint/QuickToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickToken/smartContractsData.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuickToken/smartContractsData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contracts/A.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contracts/B.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contracts/DEX.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/DEX.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +107,7 @@
       <workItem from="1684606679338" duration="665000" />
       <workItem from="1684704501257" duration="2520000" />
       <workItem from="1684707429603" duration="599000" />
+      <workItem from="1684715190746" duration="1652000" />
     </task>
     <task id="LOCAL-00001" summary="Change description">
       <created>1682449959756</created>

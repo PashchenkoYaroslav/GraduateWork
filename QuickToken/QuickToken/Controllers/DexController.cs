@@ -20,7 +20,7 @@ public class DexController: QuickTokenBaseController
     /// <summary>
     /// Sell user asset for currency.
     /// </summary>
-    [HttpPost("sellAsset")]
+    [HttpPost("SellAsset")]
     public async Task<IActionResult> SellAssetAsync(SellAssetRequest request)
     {
         var account = new Account(request.SecretKey);
@@ -46,7 +46,7 @@ public class DexController: QuickTokenBaseController
     /// <summary>
     /// Sell user currency for asset.
     /// </summary>
-    [HttpPost("sellCurrency")]
+    [HttpPost("SellCurrency")]
     public async Task<IActionResult> SellCurrencyAsync(SellCurrencyRequest request)
     {
         var account = new Account(request.SecretKey);
